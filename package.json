@@ -1,0 +1,27 @@
+{
+  "name": "mcq-generator",
+  "version": "1.0.0",
+  "description": "It generates the mcq questions using different types of AI models",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/Aaryan6/npm-mcq-generator.git"
+  },
+  "keywords": [
+    "ai"
+  ],
+  "author": "Aaryan Patel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Aaryan6/npm-mcq-generator/issues"
+  },
+  "homepage": "https://github.com/Aaryan6/npm-mcq-generator#readme",
+  "dependencies": {
+    "openai": "^4.28.4",
+    "typescript": "^5.4.2"
+  }
+}

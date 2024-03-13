@@ -21,7 +21,9 @@
   },
   "homepage": "https://github.com/Aaryan6/npm-mcq-generator#readme",
   "dependencies": {
-    "openai": "^4.28.4",
+    "openai": "^4.28.4"
+  },
+  "devDependencies": {
     "typescript": "^5.4.2"
   }
 }

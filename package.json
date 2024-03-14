@@ -4,7 +4,6 @@
   "description": "It generates the mcq questions using different types of AI models",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
-  "type": "module",
   "scripts": {
     "build": "tsc",
     "prepare": "npm run build"

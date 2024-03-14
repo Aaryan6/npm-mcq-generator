@@ -1,5 +1,3 @@
-import { generateWithOpenAI } from "./models/openai-m";
-
-module.exports = {
-  generateWithOpenAI,
-};
+export * from "./models/openai-m";
+export * from "./models/gemini-m";
+export * from "./models/togetherai-m";

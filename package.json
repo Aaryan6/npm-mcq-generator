@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/Aaryan6/npm-mcq-generator#readme",
   "dependencies": {
+    "@google/generative-ai": "^0.3.0",
     "openai": "^4.28.4"
   },
   "devDependencies": {

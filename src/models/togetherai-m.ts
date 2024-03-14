@@ -1,38 +1,33 @@
 import OpenAI from "openai";
 
-export async function generateWithOpenAI({
+export async function generateWithTogetherAI({
   topic,
   amount = 5,
   apiKey,
-  options_length = 4,
+  options_length,
 }: {
   topic: string;
   amount?: number;
   apiKey: string;
   options_length?: number;
 }) {
-  if (!apiKey) {
-    throw new Error("API Key is required");
-  }
-
-  const openai = new OpenAI({
-    apiKey: apiKey,
+  const client = new OpenAI({
+    apiKey: "315c97cdf65822b64bd9dc963950df0e11d0301916a198f4a400be0a6b605881",
+    baseURL: "https://api.together.xyz/v1",
   });
-
   const mcqStructure = [
     {
       question: "What is the capital of France?",
       options: [
         {
           title: "New York",
-          isCorrect: false,
+          isCorrect: "false",
         },
       ],
       correct_answer: "Paris",
     },
   ];
-
-  const completion = await openai.chat.completions.create({
+  const response = await client.chat.completions.create({
     messages: [
       {
         role: "system",
@@ -45,9 +40,11 @@ export async function generateWithOpenAI({
         )}`,
       },
     ],
-    model: "gpt-3.5-turbo-0125",
+    model: "mistralai/Mixtral-8x7B-Instruct-v0.1",
     response_format: { type: "json_object" },
     n: 1,
   });
-  return completion.choices[0].message.content;
+
+  const output = response.choices[0].message.content;
+  return output;
 }

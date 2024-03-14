@@ -2,10 +2,12 @@
   "name": "mcq-generator",
   "version": "1.0.0",
   "description": "It generates the mcq questions using different types of AI models",
-  "main": "index.js",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc",
+    "prepare": "npm run build"
   },
   "repository": {
     "type": "git",
@@ -25,5 +27,8 @@
   },
   "devDependencies": {
     "typescript": "^5.4.2"
-  }
+  },
+  "files": [
+    "lib/**/*"
+  ]
 }

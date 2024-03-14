@@ -1,11 +1,18 @@
 import OpenAI from "openai";
 
+type ModelProps = {
+  topic: string;
+  amount: number;
+  apiKey: string;
+  options_length: number;
+};
+
 export async function generateWithOpenAI({
   topic,
   amount,
   apiKey,
   options_length,
-}) {
+}: ModelProps) {
   if (!apiKey) {
     throw new Error("API Key is required");
   }

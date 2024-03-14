@@ -1,6 +1,6 @@
 {
   "name": "mcq-generator",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "It generates the mcq questions using different types of AI models",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
